@@ -1,0 +1,135 @@
+.spell-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e2d;
+  color: #e4d8c5;
+  width: 100%;
+}
+
+.spell-select__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.spell-select__char-card {
+  background-color: #2d2d44;
+  border: 1px solid #3a3a57;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spell-select__char-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.spell-select__spell-card {
+  background-color: #2d2d44;
+  border: 1px solid #3a3a57;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  margin: 5px 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.spell-select__spell-card:hover {
+  width: 220px;
+  height: 140px;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.spell-select__spell-card:hover .spell-details {
+  display: block;
+}
+
+.spell-select__spell-card .spell-name {
+  font-size: 14px;
+  color: #d4af37;
+}
+
+.spell-select__spell-card .spell-details {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 8px;
+  text-align: left;
+  overflow: auto;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.spell-select__spell-card.fire {
+  border-color: #f80202;
+}
+
+.spell-select__spell-card.radiant {
+  border-color: #f1c40f;
+}
+.spell-select__spell-card.heal {
+  border-color: #8ff10f;
+}
+.spell-select__spell-card.necrotic {
+  border-color: #073b4b;
+}
+.spell-select__spell-card.force {
+  border-color: #0364ba;
+}
+
+.spell-select__spell-card.ability {
+  border-color: rgb(84, 7, 7);
+}
+
+.spell-select__battle-button {
+
+  color: #1e1e2d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+  max-width: 200px;
+  margin: 20px 0;
+}
+
+.spell-select__spell-item {
+  background-color: #3a3a57;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.spell-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Adjust this as needed */
+  margin-bottom: 10px;
+}

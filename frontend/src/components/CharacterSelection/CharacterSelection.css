@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+.character-selection-item {
+  background-color: #2d2d44; /* Darker background for items */
+  border: 1px solid #3a3a57; /* Subtle border */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners for item cards */
+  width: 250px; /* Adjusted width for consistent item size */
+  height: 300px; /* Adjusted height for item cards */
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for item */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the top */
+  position: relative; /* Set this to allow absolute positioning of child elements */
+}
+
+.character-class-image {
+  width: 50px; /* Set width for images */
+  height: 50px; /* Set height for images */
+  border-radius: 50%; /* Make the images round */
+  position: absolute; /* Position the image absolutely */
+  top: 10px; /* Adjust this value to move it down */
+  right: 10px; /* Move to the right corner */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  border-width: 2px; /* Set the border width */
+  border-style: solid; /* Set border style to solid */
+}
+
+/* Golden border for Paladin */
+.paladin-border {
+  border-color: #d4af37; /* Golden border */
+}
+
+/* Brownish border for Fighter */
+.fighter-border {
+  border-color: #8B4513; /* Brown border */
+}
+
+/* Blueish border for Wizard */
+.wizard-border {
+  border-color: #1E90FF; /* Blue border */
+}
+/* Title of the character selection */
+.character-selection-title {
+  margin-bottom: 20px;
+  font-size: 24px; /* Title font size */
+  color: #d4af37; /* Golden hue for the title */
+}
+
+/* Error message style */
+.character-selection-error {
+  color: #a94442; /* Red color for error messages */
+  text-align: center; /* Center align the error message */
+}
+
+/* Grid container for the character items */
+.character-selection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Style for each character item */
+.character-selection-item {
+  background-color: #2d2d44; /* Darker background for items */
+  border: 1px solid #3a3a57; /* Subtle border */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners for item cards */
+  width: 250px; /* Adjusted width for consistent item size */
+  height: 300px; /* Adjusted height for item cards */
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for item */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Highlighted style for selected items */
+.character-selection-item.selected {
+  background-color: #3a3a57; /* Highlight background color */
+  border: 2px solid #e4d8c5; /* Light border to indicate selection */
+}
+
+/* Title of each character item */
+.character-selection-item h3 {
+  margin: 0;
+  font-size: 18px; /* Adjusted font size */
+  color: #d4af37; /* Golden hue for the title */
+}
+
+/* Details within each character item */
+.character-selection-item div {
+  margin: 5px 0; /* Margin between lines */
+  font-size: 14px; /* Adjusted font size */
+  color: #e4d8c5; /* Light text color for readability */
+}
+
+/* Hover effect for items */
+.character-selection-item:hover {
+  background-color: #3a3a57; /* Slightly different background on hover */
+  transform: scale(1.02); /* Slightly enlarge item on hover */
+}
+
+/* Style for the Start Battle button */
+.start-battle-button {
+  width: 20%; /* Set width to 20% */
+  padding: 10px;
+  font-size: 16px; /* Font size for button */
+  color: #e4d8c5; /* Light text color */
+  background-color: #3a3a57; /* Dark background for button */
+  border: 1px solid #3a3a57;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px auto; /* Center button horizontally */
+  display: block; /* Ensure the button is a block element for centering */
+}
+
+/* Hover effect for the button */
+.start-battle-button:hover {
+  background-color: #2d2d44; /* Slightly darker background on hover */
+  color: #d4af37; /* Golden text color on hover */
+}
+
+/* Adjust image styling */
+.character-class-image {
+  max-width: 40px; /* Adjust for better fitting in the round item */
+  max-height: 40px; /* Adjust for better fitting in the round item */
+  border-radius: 50%; /* Make images round as well */
+}

@@ -1,0 +1,56 @@
+/* Overall container for spell list */
+.spell-list-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: radial-gradient(circle, #2e2e45, #1e1e2f);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 10px rgba(106, 13, 173, 0.5);
+  }
+  
+  .spell-list-container h2 {
+    text-align: center;
+    color: #e4d8c5;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  }
+  
+  .spell-list-container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .spell-list-container li {
+    background-color: #3d3d5c;
+    border: 1px solid #3a3a57;
+    border-radius: 10px;
+    padding: 15px;
+    color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .spell-list-container li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.7);
+  }
+  
+  .spell-list-container strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .spell-list-container p {
+    margin: 5px 0;
+  }
+  
+  .spell-list-container p:first-of-type {
+    font-weight: bold;
+  }
+  

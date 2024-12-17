@@ -1,0 +1,85 @@
+[
+  {
+    "name": "asdasd",
+    "class": "asdads"
+  },
+  {
+    "name": "ogar",
+    "race": "Human",
+    "class": "Warrior"
+  },
+  {
+    "name": "Roko",
+    "race": "Dwarf",
+    "class": "Warrior",
+    "weap": "Shortsword"
+  },
+  {
+    "name": "Rokic",
+    "race": "Human",
+    "class": "Warrior",
+    "health": 17
+  },
+  {
+    "name": "bojo",
+    "race": "Elf",
+    "class": "Mage",
+    "health": 16
+  },
+  {
+    "name": "bongo",
+    "race": "Dwarf",
+    "class": "Rogue",
+    "health": 20
+  },
+  {
+    "name": "Momak",
+    "race": "Human",
+    "class": "Mage",
+    "weap": "Shortsword",
+    "health": 15
+  },
+  {
+    "name": "ogar",
+    "race": "Elf",
+    "class": "Warrior",
+    "weap": "Dagger",
+    "health": 18
+  },
+  {
+    "name": "Majmun",
+    "race": "Elf",
+    "class": "Warrior",
+    "weapon": "Dagger",
+    "health": 18
+  },
+  {
+    "name": "ogar",
+    "race": "Human",
+    "class": "Wizard",
+    "weapon": "Longsword",
+    "health": 15,
+    "attackPower": 4
+  },
+  {
+    "name": "asdasd",
+    "race": "Human",
+    "class": "Wizard",
+    "weapon": "Shortsword",
+    "armorClass": 9,
+    "health": 15,
+    "attackPower": 3
+  },
+  {
+    "name": "asdad",
+    "race": "Human",
+    "class": "Rogue",
+    "weapon": "Sword"
+  },
+  {
+    "name": "asdad",
+    "race": "Human",
+    "class": "Fighter",
+    "weapon": "Staff"
+  }
+]

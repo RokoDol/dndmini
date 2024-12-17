@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+  background-color: #121212; /* Dark background for the entire page */
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* Fantasy-inspired font */
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark gradient to match the fantasy theme */
+  min-height: 100vh; /* Full viewport height */
+  color: #e4d8c5; /* Light parchment color for text */
+}
+
+.home-container h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #d4af37; /* Golden hue for the heading */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5); /* Glowing effect */
+}
+
+.button-category {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between button categories */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.button {
+  display: block;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: bottom;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+  width: 200px;
+  height:250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for a raised effect */
+}
+
+.button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glowing hover effect */
+}
+
+/* Specific colors for each button group with fantasy-themed colors */
+.button-group:nth-child(1) .button:nth-child(1) { background-color: #4b0082; } /* Dark purple for Classes */
+.button-group:nth-child(1) .button:nth-child(2) { background-color: #6a0dad; } /* Royal purple for Create Class */
+
+.button-group:nth-child(2) .button:nth-child(1) { background-color: #4b0082; } /* Dark purple for Races */
+.button-group:nth-child(2) .button:nth-child(2) { background-color: #6a0dad; } /* Royal purple for Create Race */
+
+.button-group:nth-child(3) .button:nth-child(1) { background-color: #4b0082; } /* Dark purple for Create Item */
+.button-group:nth-child(3) .button:nth-child(2) { background-color: #6a0dad; } /* Royal purple for Item List */
+
+.button-group:nth-child(4) .button:nth-child(1) { background-color: #4b0082; } /* Dark purple for Create Spell */
+.button-group:nth-child(4) .button:nth-child(2) { background-color: #6a0dad; } /* Royal purple for Spells List */
+
+.button-group:last-child .button {
+  background-color: #4b0082; /* Dark purple for Create Character and View Characters */
+}
+
+.button-group:last-child {
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+  gap: 20px;
+}

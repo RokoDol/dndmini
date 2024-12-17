@@ -1,0 +1,78 @@
+.sparkle {
+    background-color: rgba(62, 215, 62, 0.8); /* Light green for healing */
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 10px rgba(144, 238, 144, 0.8); /* Glow effect for healing */
+  }
+  
+  .unheal-effect-icon {
+    font-size: 15px; /* Adjust size as needed */
+    transition: opacity 0.5s ease; /* Smooth fade-out */
+  }
+  .unheal-effect-icon.fade-out {
+    opacity: 0; /* Fade out effect */
+  }
+  
+  .slash-effect {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.7); /* Red color for the slash */
+    height: 15px; /* Adjust height for the wound effect */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform-origin: center; /* Rotate around the center */
+    border-radius: 50%; /* Make it slightly rounded */
+  }
+  
+  .blood-particle {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.8); /* Red color for blood particles */
+    width: 5px; /* Size of blood particles */
+    height: 5px; /* Size of blood particles */
+    border-radius: 50%; /* Make it circular */
+    pointer-events: none; /* Prevent mouse events */
+  }
+  
+  
+  .radiant-slash-effect {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: rgba(255, 215, 0, 0.8); /* Radiant glow color */
+    border-radius: 5px;
+    transform-origin: center;
+}
+
+.golden-sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gold;
+}
+
+.slow-effect-icon {
+  font-size: 15px;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.poison-bubble {
+  width: 20px; /* Adjust bubble size */
+  height: 20px; /* Adjust bubble size */
+  background-color: rgba(0, 255, 0, 0.7); /* Poisonous green color */
+  border-radius: 50%;
+}
+
+.poison-sparkle {
+  width: 10px; /* Adjust sparkle size */
+  height: 10px; /* Adjust sparkle size */
+  background-color: rgba(255, 255, 0, 0.8); /* Sparkle color */
+  border-radius: 50%;
+  position: absolute;
+}
+

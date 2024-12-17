@@ -1,0 +1,50 @@
+[
+  {
+    "name": "asd",
+    "race": "Human",
+    "classType": "Fighter",
+    "weapon": "Staff"
+  },
+  {
+    "name": "asd",
+    "race": "Human",
+    "classType": "Fighter",
+    "weapon": "Staff"
+  },
+  {
+    "name": "asdasd",
+    "race": "Elf",
+    "classType": "Fighter",
+    "weapon": "Staff"
+  },
+  {
+    "name": "asdasd",
+    "race": "Elf",
+    "classType": "Fighter",
+    "weapon": "Dagger"
+  },
+  {
+    "name": "asda",
+    "race": "Elf",
+    "classType": "Fighter",
+    "weapon": "Dagger"
+  },
+  {
+    "name": "Ante gotovoina",
+    "race": "Human",
+    "classType": "Wizard",
+    "weapon": "Staff"
+  },
+  {
+    "name": "supak meraklija",
+    "race": "Dwarf",
+    "classType": "Fighter",
+    "weapon": "Dagger"
+  },
+  {
+    "name": "aaksss",
+    "race": "Elf",
+    "classType": "Fighter",
+    "weapon": "Sword"
+  }
+]

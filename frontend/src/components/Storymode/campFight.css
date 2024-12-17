@@ -1,0 +1,432 @@
+.tilemaptwos-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e2d;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+      padding: 0;       /* Remove any padding */
+    margin: 0; 
+}
+
+.tilemaptwos-exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.tilemaptwos-grid {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    flex-grow: 1;
+    gap: 1px;
+    overflow: hidden;
+}
+
+.tilemaptwos-square {
+  width: 4vw; /* Or consider increasing this */
+  height: 4vw; /* Or consider increasing this */
+  background-color: #3a3a57;
+  border: 1px solid #2c2c3c;
+  margin: 0;
+  position: relative; /* Needed for absolute positioning of child elements */
+  display: flex; /* Added to center content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: small;
+}
+
+.tilemaptwos-below {
+  border: 2px solid white;
+  width: 100%;
+  background-color: #2e2e40;
+  height: 87%;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.left-content {
+  width: 50%; /* Restricts content to 50% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to the top */
+}
+.race-class-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.race-class-data {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #1e1e2f;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.race-class-data p {
+  margin: 5px;
+  color: #e4d8c5;
+  font-weight: bold;
+  font-size: small;
+  text-align: left;
+}
+
+.spell-details-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 50%; /* Ensure it stays within the 50% width */
+  margin-left: 10px;
+}
+
+.spell-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+}
+
+.spell-card {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.end-turn-btn {
+  padding: 10px 15px;
+  color: #1e1e2f;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right:30px;
+}
+
+.end-turn-btn:hover {
+  background-color: #e4c663;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.7);
+}
+
+
+.nameAndButton {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: flex-start; /* Aligns the content to the left */
+  gap: 10px; /* Adds space between the name and the button */
+  max-width: 200px; /* Fixes the width to ensure consistency */
+  height: 100px; /* Fixes the height */
+  overflow: hidden; /* Ensures that content doesn't overflow the container */
+  position: relative; /* To control positioning inside the container */
+}
+.nameAndButton h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px; /* Adjust size as needed */
+  color: white; /* Set text color to white for better visibility */
+  white-space: nowrap; /* Prevents the name from wrapping */
+  overflow: hidden; /* Hides overflowed content */
+  text-overflow: ellipsis; /* Adds "..." if the name is too long */
+  max-width: 100%; /* Ensures the name doesn't exceed the container width */
+ 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tilemaptwos-square {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+
+.spell-card:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.cooldown-indicator {
+  position: absolute;
+  top: 0px; /* Adjust as needed */
+  left: 0px; /* Adjust as needed */
+  color: white; /* Change to white for better visibility */
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 2px 5px; /* Add some padding for better appearance */
+  border-radius: 3px; /* Rounded corners */
+  width:75%;
+  height: 92%;
+}
+
+.spell-thumbnail {
+  position: relative; /* Set position to relative to contain absolute positioning of the indicator */
+  width: 110%;
+  height: 110%;
+  margin-top:15px;
+}
+
+.spell-image-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area */
+  border-radius: 3px; /* Slightly smaller border radius */
+}
+
+.spell-description {
+  position: absolute;
+  top: 50px; /* Adjusted for smaller cards */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(50, 50, 50, 0.95); /* Dark background */
+  padding: 5px; /* Less padding */
+  border-radius: 5px;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  width: 150px; /* Smaller width for details */
+  transition: visibility 0s, opacity 0.2s ease;
+  z-index: 10; /* Ensure it's above other elements */
+  text-align: left;
+  color: #e4d8c5;
+}
+
+.spell-card:hover .spell-description {
+  visibility: visible; /* Show on hover */
+  opacity: 1;
+}
+
+.spell-card:hover .spell-description:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(50, 50, 50, 0.95) transparent; /* Tooltip arrow */
+}
+
+.spell-card p {
+  margin: 0;
+  font-size: 10px; /* Smaller font size */
+}
+
+.spell-card p strong {
+  color: #d4af37;
+}
+
+/* Description text styling */
+.spell-card em {
+  color: #b0a89d;
+  font-style: italic;
+  font-size: 0.8em; /* Smaller font size */
+}
+
+
+/* Style for health indicator */
+.health-bar {
+  position: absolute; 
+  top: -1px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  max-width: 90%; 
+  height: 15px; /* Increased height for better visibility */
+  background-color: red; 
+  border-radius: 2px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 1; 
+}
+
+
+
+.health-text {
+  color: white; 
+  font-size:8px; 
+  font-weight:bold; 
+  z-index: 2; /* Ensure text is above the health bar background */
+  width:30px;
+ 
+}
+
+.initiative-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.initiative-overlay h2 {
+  margin-bottom: 20px;
+}
+
+.initiative-overlay button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.moveButton{
+  width:40px;
+  height:40px;
+}
+
+.moveButton img {
+  width: 43px;
+  height: 43px;
+}
+.team-indicator {
+  height: 10px; /* Adjust height as needed */
+  width: 10px; /* Adjust width as needed */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.team-indicator.gold {
+  background-color: gold; /* Color for gold team */
+}
+
+.team-indicator.green {
+  background-color: green; /* Color for green team */
+}
+.tilemaptwos-square.highlight {
+  background: radial-gradient(circle, rgba(250, 185, 255, 0.1) 0%, rgba(200, 150, 240, 0.05) 75%);
+  border: 1px solid rgba(250, 185, 255, 0.15);
+  border-radius: 4px;
+  
+  z-index: 10;
+}
+
+
+.attack-highlight {
+  background-color: rgba(255, 0, 0, 0.3); /* Light transparent red */
+}
+
+.action-buttons {
+  margin-top: 10px; /* Space above the buttons */
+
+  display: flex; /* Use flexbox to arrange buttons */
+  flex-direction: row; /* Default direction */
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.move-button,
+.attack-button {
+  border: none;
+  background: transparent; /* or another background color */
+  cursor: pointer;
+  width: 42px; /* Set width to 45px */
+  height: 42px; /* Set height to 45px */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox to center the image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.move-button img,
+.attack-button img {
+  width: 100%; /* Image fills the button width */
+  height: 100%; /* Image fills the button height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.move-button.active {
+  outline: 2px solid blue; /* Indicate active state */
+}
+
+.attack-button.active {
+  outline: 2px solid red; /* Indicate active state with a different color */
+}
+
+.highlight-aoe {
+  background-color: rgba(255, 0, 0, 0.3) !important; /* Adjust color and transparency as desired */
+}
+
+
+.tilemaptwos-square.highlight-hovered {
+  background-color: rgba(255, 255, 0, 0.5) !important; /* or any color you want for single square highlight */
+}
+
+
+.tilemaptwos-square.wall {
+  background-color: #333; /* Example: Set a dark background for walls */
+  cursor: not-allowed; /* Optionally, change cursor to show it's not interactable */
+}
+
+
+.winner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.winner-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+.character-name {
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 50%; /* Rounded corners */
+  display: inline-block;
+  margin: 5px;
+}
+
+.gold-border {
+  border: 2px solid gold; /* Gold border for Gold Team */
+  color: gold; /* Gold text color */
+  background-color: rgba(255, 215, 0, 0.1); /* Light gold background */
+}
+
+.green-border {
+  border: 3px solid green; /* Green border for Green Team */
+  color: green; /* Green text color */
+  background-color: rgba(0, 255, 0, 0.1); /* Light green background */
+}

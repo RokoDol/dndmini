@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+.class-list-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44);
+  min-height: 100vh;
+  font-family: 'Cinzel', serif;
+  color: #e4d8c5;
+}
+
+.create-class-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #6a0dad;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(106, 13, 173, 0.5);
+  width:20%;
+}
+
+.create-class-button:hover {
+  background-color: #4b0082;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.7);
+}
+
+.class-item {
+  background-color: #27273a;
+  border: 1px solid #4e4e66;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: left;
+  color: #e4d8c5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(102, 51, 153, 0.3);
+}
+
+.class-item div {
+  margin-bottom: 10px;
+  color: #c0b283;
+}
+
+.class-item.paladin {
+  border: 2px solid #d4af37; /* Golden border for Paladin */
+}
+
+.class-item.fighter {
+  border: 2px solid #8b4513; /* Brown border for Fighter */
+}
+
+.class-item.wizard {
+  border: 2px solid #1e90ff; /* Blue border for Wizard */
+}
+
+.no-classes-message {
+  font-size: 18px;
+  color: #c0b283;
+}

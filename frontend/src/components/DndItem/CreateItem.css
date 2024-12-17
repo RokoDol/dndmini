@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+  background-color: #121212; /* Dark background for the entire page */
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* Fantasy-inspired font */
+  color: #e4d8c5; /* Light parchment color for text */
+}
+
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark fantasy background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(102, 51, 153, 0.3); /* Adds a magical glow */
+}
+
+form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #d4af37; /* Golden hue for labels */
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.6); /* Glowing text effect */
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #3a3a57; /* Subtle dark border */
+  border-radius: 8px;
+  background-color: #2d2d44; /* Dark input background */
+  color: #e4d8c5; /* Light text color */
+  font-family: 'Cinzel', serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b1a29b; /* Muted color for placeholder text */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6a0dad; /* Dark purple border on focus */
+  box-shadow: 0 0 5px rgba(106, 13, 173, 0.5); /* Purple glow effect on focus */
+}
+
+button {
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6a0dad; /* Dark purple button */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle glowing effect */
+}
+
+button:hover {
+  background-color: #7e22ce; /* Brighter purple on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(126, 34, 206, 0.5); /* Enhanced glowing effect on hover */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button[type="button"] {
+  background-color: #495057; /* Gray button for secondary actions */
+}
+
+button[type="button"]:hover {
+  background-color: #6c757d; /* Slightly lighter gray on hover */
+}

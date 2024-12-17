@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e4e4e4; /* Light text color */
+    font-family: 'Cinzel', serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+}
+
+.team-selection-heading {
+    color: #ffcc00; /* Title color */
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.8); /* Glowing effect */
+    margin: 20px 0;
+}
+
+.team-selection-indicator {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px; /* Adjusted font size */
+    color: #e4d8c5; /* Light text color */
+}
+
+/* Character selection grid */
+.character-selection-grid {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px; /* Padding around the grid */
+    gap: 20px; /* Space between items */
+}
+
+/* Character selection item styling */
+.character-selection-item {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 250px; /* Fixed width for items */
+    background-color: #2d2d44; /* Darker background for items */
+    border: 1px solid #3a3a57; /* Subtle border */
+    border-radius: 8px; /* Rounded corners for item cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for item */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    padding: 10px; /* Padding inside items */
+    position: relative; /* Allow absolute positioning of child elements */
+}
+
+/* Style for locked characters */
+.character-locked {
+    opacity: 0.5; /* Dim the appearance of locked characters */
+}
+
+/* Style for greyed-out characters */
+.character-greyed-out {
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Title of each character item */
+.character-selection-item h3 {
+    margin: 0;
+    font-size: 18px; /* Adjusted font size */
+    color: #d4af37; /* Golden hue for the title */
+}
+
+/* Details within each character item */
+.character-selection-item div {
+    margin: 5px 0; /* Margin between lines */
+    font-size: 14px; /* Adjusted font size */
+    color: #e4d8c5; /* Light text color for readability */
+}
+
+/* Style for team sections */
+.team-section {
+    display: flex;
+    justify-content: space-around; /* Space teams evenly */
+    margin-top: 20px; /* Space above the teams */
+}
+
+/* Style for each team box */
+.team-box {
+    background-color: #2d2d44; /* Darker background */
+    border: 1px solid #3a3a57; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    width: 45%; /* Width for each team box */
+}
+
+/* Title of each team box */
+.team-box h3 {
+    margin: 0;
+    font-size: 20px; /* Font size for team titles */
+}
+
+/* Style for team members */
+.team-member {
+    color: #e4d8c5; /* Light text color */
+}
+
+/* Style for empty slots */
+.empty-slot {
+    color: #999; /* Grey color for empty slots */
+}
+
+/* Style for Start Battle button */
+.start-battle-btn {
+    width: 20%; /* Set width to 20% */
+    padding: 10px;
+    font-size: 16px; /* Font size for button */
+    color: #e4d8c5; /* Light text color */
+    background-color: #3a3a57; /* Dark background for button */
+    border: 1px solid #3a3a57;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 20px auto; /* Center button horizontally */
+    display: block; /* Ensure the button is a block element for centering */
+}
+
+/* Hover effect for the button */
+.start-battle-btn:hover {
+    background-color: #2d2d44; /* Slightly darker background on hover */
+    color: #d4af37; /* Golden text color on hover */
+}
+
+/* Adjust image styling */
+.character-class-image {
+    width: 50px; /* Set width for images */
+    height: 50px; /* Set height for images */
+    border-radius: 50%; /* Make the images round */
+    position: absolute; /* Position the image absolutely */
+    top: 10px; /* Adjust this value to move it down */
+    right: 10px; /* Move to the right corner */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-width: 2px; /* Set the border width */
+    border-style: solid; /* Set border style to solid */
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+  background-color: #121212; /* Dark background for the entire page */
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* Fantasy-inspired font */
+}
+
+.item-list {
+  padding: 20px;
+  color: #e4d8c5; /* Light parchment color for text */
+}
+
+.item-list h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #d4af37; /* Golden hue for the heading */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5); /* Glowing text effect */
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+  gap: 20px; /* Spacing between columns */
+}
+
+.item-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-column h2 {
+  margin-top: 0;
+  color: #d4af37; /* Golden hue to match the theme */
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.6);
+}
+
+.item-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #3a3a57; /* Subtle dark border */
+  border-radius: 10px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark fantasy background */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(102, 51, 153, 0.3); /* Adds a magical glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: scale(1.03); /* Slight scaling effect on hover */
+  box-shadow: 0 0 25px rgba(106, 13, 173, 0.5); /* Enhanced glowing effect on hover */
+}
+
+.item-card strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #c0b283; /* Light golden color */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.item-card p {
+  margin: 0;
+  color: #e4d8c5; /* Light text color for readability */
+}

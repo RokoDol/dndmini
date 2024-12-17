@@ -1,0 +1,150 @@
+/* TwoSpellAbilitySelection.css */
+
+.two-spell-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #1e1e2d; /* Dark background */
+    color: #e4d8c5; /* Light text color */
+    width: 98%;
+ 
+}
+
+.two-spell-select__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between spell cards */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.two-spell-select__char-card {
+    background-color: #2d2d44; /* Darker card background */
+    border: 1px solid #3a3a57; /* Border color */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 300px; /* Fixed width */
+    height: auto; /* Automatic height based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.two-spell-select__char-card h3 {
+    font-size: 16px; /* Title size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.two-spell-select__spells {
+    width: 100%; /* Full width for spells section */
+}
+
+.two-spell-select__spell-card {
+    background-color: #2d2d44; /* Same background as char card */
+    border: 1px solid #3a3a57; /* Border color */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 200px; /* Fixed width for spell cards */
+    height: 100px; /* Fixed height */
+    text-align: center; /* Center text */
+    margin: 5px 0; /* Margin around spell cards */
+    position: relative; /* Position for details display */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure layering */
+}
+
+.two-spell-select__spell-card:hover {
+    width: 220px; /* Slightly increase width on hover */
+    height: 140px; /* Increase height on hover */
+    transform: scale(1.05); /* Scale effect */
+    z-index: 2; /* Bring to front on hover */
+}
+
+.two-spell-select__spell-card:hover .two-spell-select__spell-details {
+    display: block; /* Show details on hover */
+}
+
+.two-spell-select__spell-name {
+    font-size: 14px; /* Spell name size */
+    color: #d4af37; /* Color for spell name */
+}
+
+.two-spell-select__spell-details {
+    display: none; /* Initially hidden */
+    position: absolute; /* Cover entire card */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for details */
+    color: white; /* White text */
+    padding: 10px; /* Padding around details */
+    width: 100%; /* Full width */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    height: 100%; /* Full height */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Left-aligned text */
+    overflow: auto; /* Scroll if overflow */
+    font-size: 12px; /* Smaller font size for details */
+    z-index: 2; /* Ensure it's on top */
+}
+
+.two-spell-select__spell-card.fire {
+    border-color: #f80202; /* Red for fire spells */
+}
+
+.two-spell-select__spell-card.radiant {
+    border-color: #f1c40f; /* Yellow for radiant spells */
+}
+
+.two-spell-select__spell-card.heal {
+    border-color: #8ff10f; /* Green for healing spells */
+}
+
+.two-spell-select__spell-card.necrotic {
+    border-color: #073b4b; /* Dark blue for necrotic spells */
+}
+
+.two-spell-select__spell-card.force {
+    border-color: #0364ba; /* Blue for force spells */
+}
+
+.two-spell-select__spell-card.ability {
+    border-color: rgb(84, 7, 7); /* Dark red for ability spells */
+}
+
+.two-spell-select__battle-button {
+    color: #1e1e2d; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Button font size */
+    align-self: center; /* Center alignment */
+    max-width: 200px; /* Max width */
+    margin: 20px 0; /* Margin around button */
+}
+
+.two-spell-select__spell-item {
+    background-color: #3a3a57; /* Darker background for items */
+    padding: 5px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0; /* Margin around items */
+    font-size: 12px; /* Font size */
+}
+
+.two-spell-select__spell-image {
+    width: 50px; /* Fixed image size */
+    height: 50px; /* Fixed image height */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below image */
+}
+
+.two-spell-select__class-image {
+    width: 50px; /* Adjust size as necessary */
+    height: auto;
+    margin-top: 10px; /* Add some spacing if needed */
+  }

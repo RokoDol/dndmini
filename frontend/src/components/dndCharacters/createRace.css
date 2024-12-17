@@ -1,0 +1,59 @@
+.create-race-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.create-race-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(102, 51, 153, 0.3);
+}
+
+.create-race-form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-race-form button,
+.button-link {
+  display: block; /* Makes the button fill the form width */
+  width: 100%; /* Full width to match the parent container */
+  padding: 12px 0; /* Consistent height for both buttons */
+  margin-top: 10px; /* Add margin between buttons */
+  border: none;
+  border-radius: 8px;
+  background-color: #6a0dad; /* Dark purple for the main theme */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle glowing effect */
+  text-decoration: none; /* Remove underline for the link */
+}
+
+.create-race-form button:hover,
+.button-link:hover {
+  background-color: #7e22ce; /* Brighter purple on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(126, 34, 206, 0.5);
+}
+
+.button-link {
+  background-color: #495057; /* Same color as the Save Race button */
+  height:18px;
+}
+
+.button-link:hover {
+  background-color: #6c757d; /* Same hover effect */
+}
+
+

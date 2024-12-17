@@ -1,0 +1,71 @@
+/* SelectChapter styles */
+.select-chapter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  overflow: hidden;
+  transition: background-color 3s ease-in;
+}
+
+.select-chapter-container.darken {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/* Overlay (content) styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 3s ease-in;
+}
+
+.select-chapter-container.darken .overlay {
+  opacity: 0;
+}
+
+.select-chapter-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.chapter-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.chapter-item {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chapter-item:hover {
+  transform: scale(1.1);
+}
+
+.chapter-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.chapter-item h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}

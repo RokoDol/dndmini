@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e4e4e4; /* Light text color */
+    font-family: 'Cinzel', serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire character selection section */
+.single-player-character-container {
+    padding: 20px;
+    background-color: #2d2d44; /* Darker background for the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title for the section */
+.single-player-character-title {
+    color: #ffcc00; /* Golden title color */
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.8); /* Glowing effect */
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+/* Error message */
+.single-player-character-error {
+    color: #d4af37; /* Golden text for errors */
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Grid layout for character items */
+.single-player-character-grid {
+    display: flex; /* Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap instead of scrolling horizontally */
+    justify-content: center; /* Center items within the container */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Individual character item styling */
+.single-player-character-item {
+    flex: 0 0 auto;
+    width: 250px; /* Fixed width for items */
+    background-color: #3a3a57; /* Darker background for items */
+    border: 1px solid #2d2d44; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+    position: relative;
+}
+
+.single-player-character-item:hover {
+    transform: translateY(-5px);
+    background-color: #2d2d44; /* Slightly lighter background on hover */
+}
+
+/* Highlight selected character item */
+.single-player-character-item-selected {
+    border: 2px solid #ffcc00; /* Golden border for selected items */
+    background-color: #3a3a57; /* Keep the same background when selected */
+}
+
+/* Title of each character item */
+.single-player-character-item-title {
+    margin: 0;
+    font-size: 18px;
+    color: #d4af37; /* Golden title color */
+    font-weight: bold;
+}
+
+/* Character class, race, level, and attributes styling */
+.single-player-character-item-class,
+.single-player-character-item-race,
+.single-player-character-item-level,
+.single-player-character-item-attack-bonus,
+.single-player-character-item-attack-power,
+.single-player-character-item-spell-attack,
+.single-player-character-item-spell-power,
+.single-player-character-item-health,
+.single-player-character-item-armor-class,
+.single-player-character-item-speed,
+.single-player-character-item-weapon,
+.single-player-character-item-shield {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #e4d8c5; /* Light text color for readability */
+}
+
+.single-player-character-item-class strong,
+.single-player-character-item-race strong,
+.single-player-character-item-level strong,
+.single-player-character-item-attack-bonus strong,
+.single-player-character-item-attack-power strong,
+.single-player-character-item-spell-attack strong,
+.single-player-character-item-spell-power strong,
+.single-player-character-item-health strong,
+.single-player-character-item-armor-class strong,
+.single-player-character-item-speed strong,
+.single-player-character-item-weapon strong,
+.single-player-character-item-shield strong {
+    color: #ffcc00; /* Golden color for strong elements */
+}
+
+/* Optional custom styling for the selected character item */
+.single-player-character-item.selected {
+    background-color: #2d2d44;
+    border-left: 4px solid #ffcc00; /* Highlight the left border in gold */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .single-player-character-grid {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        justify-content: center; /* Center items in the column */
+    }
+
+    .single-player-character-item {
+        width: 100%; /* Full width for items on smaller screens */
+    }
+
+    .single-player-character-title {
+        font-size: 1.8em;
+    }
+
+    .single-player-character-item-title {
+        font-size: 1.3em;
+    }
+}

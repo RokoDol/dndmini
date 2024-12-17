@@ -1,0 +1,83 @@
+/* Container for the entire chapter */
+.chapter-one-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1a1a1a; /* Dark background for that D&D feel */
+  color: #f0e68c; /* Goldish text for contrast */
+  font-family: 'MedievalSharp', sans-serif; /* Medieval font for D&D feel */
+}
+
+/* Centering and full-screen styling for images */
+.firstshot-container, .townshot-container, .forestshot-container, .campshot-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Ensure they are at the back */
+}
+
+/* Text and dialogue container */
+.text-dialogue-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 10; /* Ensure it's on top of images */
+  color: #f0e68c; /* Light text color */
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border: 3px solid #d1a03d; /* Gold border for extra detail */
+}
+
+/* Dialogue text style */
+.text-dialogue {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button style to match the D&D theme */
+button.next-button {
+  background-color: #d1a03d; /* Goldish button */
+  border: none;
+  color: #1a1a1a; /* Dark text for contrast */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button.next-button:hover {
+  background-color: #c58b1e; /* Slightly darker gold for hover effect */
+  transform: scale(1.05);
+}
+
+/* Fade-in animation for smooth transitions */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Specific image containers (optional tweaks for consistency) */
+.firstshot-image, .townshot-image, .forestshot-image, .campshot-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

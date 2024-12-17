@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+nav {
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark fantasy background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(102, 51, 153, 0.3); /* Adds a magical glow */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #e4d8c5; /* Light parchment color for text */
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background-color: #6a0dad; /* Dark purple background on hover */
+  color: #e4d8c5; /* Light parchment color for text on hover */
+}
+
+nav ul .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark fantasy background for dropdown */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(102, 51, 153, 0.3); /* Adds a magical glow */
+  z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+nav ul .dropdown li {
+  margin: 0;
+}
+
+nav ul .dropdown li a {
+  padding: 10px 20px;
+  border-radius: 0;
+  color: #e4d8c5; /* Light parchment color for text */
+}
+
+nav ul .dropdown li a:hover {
+  background-color: #7e22ce; /* Brighter purple on hover */
+  color: #e4d8c5; /* Light parchment color for text */
+}

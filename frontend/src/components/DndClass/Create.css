@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body {
+  background-color: #121212; /* Set a consistent dark background color for the entire page */
+  color: #e4d8c5; /* Light parchment color for text */
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* Modern fantasy-inspired font */
+}
+
+.class-creation-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #1e1e2f, #2d2d44); /* Dark fantasy background */
+  border: 2px solid #3a3a57; /* Subtle, glowing border effect */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(102, 51, 153, 0.3); /* Adds a magical glow */
+}
+
+.class-creation-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #d4af37; /* Golden hue to give a regal touch */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5); /* Glowing text effect */
+}
+
+.class-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.class-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.class-form label {
+  font-size: 15px;
+  color: #c0b283; /* Light golden color */
+}
+
+.class-form input {
+  padding: 10px;
+  border: 1px solid #4e4e66;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #27273a; /* Dark background for inputs */
+  color: #e4d8c5; /* Light text color */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.class-form input:focus {
+  border-color: #c71585; /* Magenta glow on focus */
+  box-shadow: 0 0 10px rgba(199, 21, 133, 0.6);
+}
+
+.submit-button {
+  padding: 12px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #6a0dad; /* Royal purple for a fantasy touch */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(106, 13, 173, 0.5);
+}
+
+.submit-button:hover {
+  background-color: #4b0082; /* Darker shade on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.7);
+}
+
+.success-message, .error-message {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.success-message {
+  background-color: #3c763d;
+  color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+.error-message {
+  background-color: #a94442;
+  color: #f2dede;
+  border: 1px solid #ebccd1;
+}

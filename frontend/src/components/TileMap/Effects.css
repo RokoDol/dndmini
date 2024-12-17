@@ -1,0 +1,42 @@
+/* Effects.css */
+@keyframes fireball {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.7; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.fireball-animation {
+    animation: fireball 1s ease-out;
+    background-color: red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+@keyframes heal {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+.heal-animation {
+    animation: heal 1.5s ease-out;
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes lightning {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.lightning-animation {
+    animation: lightning 0.5s ease-in-out;
+    background-color: yellow;
+    width: 30px;
+    height: 100px;
+    position: absolute;
+}

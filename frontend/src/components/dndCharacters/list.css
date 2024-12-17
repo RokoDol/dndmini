@@ -1,0 +1,60 @@
+/* frontend/src/components/dndCharacters/list.css */
+
+/* Container for the list of races */
+.list-races-container {
+    padding: 20px;
+    background-color:0 4px 8px rgba(0, 0, 0, 0.3); /* Dark background for consistency with the theme */
+    color: #e4d8c5; /* Light text color for readability */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure container takes full viewport height */
+  }
+  
+  /* Title of the races list */
+  .list-races-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #d4af37; /* Golden hue for the title */
+  }
+  
+  /* Error message style */
+  .list-races-error {
+    color: #a94442; /* Red color for error messages */
+  }
+  
+  /* Grid container for the list items */
+  .list-races-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  /* Style for each race item */
+  .list-races-item {
+    background-color: #2d2d44; /* Darker background for items */
+    border: 1px solid #3a3a57; /* Subtle border */
+    padding: 15px;
+    margin: 0;
+    border-radius: 8px; /* Rounded corners for item cards */
+    width: 200px; /* Fixed width for consistent item size */
+    text-align: center; /* Center text inside the item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for item */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Title of each race item */
+  .list-races-item h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* Hover effect for items */
+  .list-races-item:hover {
+    background-color: #3a3a57; /* Slightly different background on hover */
+    transform: scale(1.02); /* Slightly enlarge item on hover */
+  }
+  

@@ -1,0 +1,224 @@
+/* Wrapper for the entire section */
+.wrapperAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #2a2a2a, #3c3c3c);
+  border: 2px solid #444;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+ 
+}
+
+
+/* Title Styling */
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: #b29aff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(178, 154, 255, 0.9);
+  letter-spacing: 2px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title:hover {
+  color: #ffb3ff;
+  text-shadow: 0 0 25px rgba(255, 178, 255, 1), 0 0 50px rgba(178, 154, 255, 0.8);
+}
+
+/* Character Data Section */
+.character-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 12px;
+}
+
+.character-data {
+  background: rgba(35, 35, 35, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-data:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.character-name-spell {
+  font-size: 30px;
+  color: #f2f2f2;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.character-data p {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #e1e1e1;
+}
+
+.attribute-value {
+  font-weight: bold;
+  color: #b29aff;
+}
+
+/* Spell Slots */
+.spell-slots {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.spell-slot {
+  width: 60px;
+  height: 60px;
+  border: 2px dashed #5a5a5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 40, 40, 0.9);
+  transition: background 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.spell-slot.filled {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.spell-slot img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.spell-slot.empty:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05); /* Slightly enlarge the empty slots on hover */
+}
+
+/* Available Spells Section */
+.available-spells {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.available-spells .spell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 7px;
+  border: 1px solid transparent;
+  background: rgba(30, 30, 30, 0.8);
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.available-spells .spell.selected {
+  background: rgba(20, 20, 20, 0.8);
+  border: 2px solid #6c1e80;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.9);
+  color: #d0d0d0;
+  transform: scale(1.05);
+}
+
+.available-spells .spell.selected:hover {
+  transform: scale(1.1);
+  background: rgba(25, 25, 25, 0.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.9);
+}
+
+.available-spells .spell-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Spell Details Tooltip */
+.spell-details {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #2a2a2a;
+  color: #d9d9d9;
+  border: 1px solid #444;
+  padding: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: none;
+  width: 220px;
+  font-size: 13px;
+  font-family: 'Cinzel', serif;
+  border-radius: 6px;
+}
+
+.spell {
+  position: relative;
+  display: inline-block;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.spell:hover .spell-details {
+  display: block;
+  z-index: 20;
+}
+
+.spell-icon {
+  width: 55px;
+  height: 55px;
+}
+
+.spell-name {
+  font-size: 15px;
+  font-weight: bold;
+  color: #d0d0d0;
+}
+
+.spell-details p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* Spell Slot Styling */
+.spell-slot {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #666;
+  margin: 12px;
+  position: relative;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgba(60, 60, 60, 0.9), rgba(40, 40, 40, 0.9));
+}
+
+.filled {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.filled:hover {
+  background-color: #444;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.9);
+}
