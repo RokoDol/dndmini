@@ -9,7 +9,7 @@ import necroticImage from '../spellImages/necrotic.png';
 import healingImage from '../spellImages/healing.png';
 import acidImage from '../spellImages/acid.png';
 import TileMapTwos from '../TileMap/TileMapTwos.js'; // Adjust the import path
-import { useLocation } from 'react-router-dom';
+
 
 const ChapterOneSpells = () => {
   const [character, setCharacter] = useState(null);
@@ -24,9 +24,7 @@ const ChapterOneSpells = () => {
   const [showMap, setShowMap] = useState(false);
   const [hoveredSpell, setHoveredSpell] = useState(null);
 
-  const location = useLocation();
-  const { currentChapter } = location.state || {};
-
+  
   const damageTypeImageMap = {
     ability: abilityImage,
     radiant: radiantImage,
@@ -58,6 +56,7 @@ const ChapterOneSpells = () => {
   
         // Filter NPCs
         const npcs = allCharacters.filter((char) => char.isNpc);
+       
   
         console.log('NPCs:', npcs); // Logs filtered NPCs
   
@@ -65,36 +64,37 @@ const ChapterOneSpells = () => {
         const selectedCharacter = JSON.parse(localStorage.getItem('selectedCharacter'));
         setCharacter(selectedCharacter);
   
-        // If coming from chapter one, initialize the teams
-        if (currentChapter === 'chapterOne') {
-          const Gorn = npcs.find((npc) => npc.name === 'Gorn');
-          const Goblin = npcs.find((npc) => npc.name === 'Goblin');
-          const GoblinChief = npcs.find((npc) => npc.name === 'Goblin Chief');
-          const GoblinCharger = npcs.find((npc) => npc.name === 'Goblin Charger');
+        // Extract specific NPCs
+        const Gorn = npcs.find((npc) => npc.name === 'Gorn');
+        const Goblin = npcs.find((npc) => npc.name === 'Goblin'); // Only one Goblin
+        const GoblinChief = npcs.find((npc) => npc.name === 'Goblin Chief');
+        const GoblinCharger = npcs.find((npc) => npc.name === 'Goblin Charger');
   
-          // Setup team1 and team2 with the selected character and NPCs
-          const team1Members = [selectedCharacter, Gorn]
-            .filter(Boolean)
-            .map((char) => ({
-              ...char,
-              team: 'gold',
-              isNpc: char.isNpc || false, // Ensure isNpc is included
-            }));
+        // Setup teams
+        const team1Members = [selectedCharacter, Gorn].filter(Boolean).map((char) => ({
+          ...char,
+          team: 'gold',
+          isNpc: char.isNpc || false, // Ensure isNpc is included
+        }));
   
-          const team2Members = [Goblin, GoblinChief, GoblinCharger]
-            .filter(Boolean) // Remove any null or undefined NPCs
-            .map((npc) => ({
-              ...npc,
-              team: 'green',
-              isNpc: true, // Explicitly mark these as NPCs
-            }));
+        const team2Members = [
+          Goblin, // Only one Goblin
+          GoblinChief,
+          GoblinCharger,
+        ]
+          .filter(Boolean) // Remove any null or undefined NPCs
+          .map((npc) => ({
+            ...npc,
+            team: 'green',
+            isNpc: true, // Explicitly mark these as NPCs
+          }));
   
-          setTeam1(team1Members);
-          setTeam2(team2Members);
+        setTeam1(team1Members);
+        setTeam2(team2Members);
   
-          console.log('Team 1 (Gold):', team1Members);
-          console.log('Team 2 (Green):', team2Members);
-        }
+        // Log the teams for debugging
+        console.log('Team 1 (Gold):', team1Members);
+        console.log('Team 2 (Green):', team2Members);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -103,7 +103,7 @@ const ChapterOneSpells = () => {
     };
   
     fetchData();
-  }, [currentChapter]); // Add currentChapter as a dependency
+  }, []);
   
   
   

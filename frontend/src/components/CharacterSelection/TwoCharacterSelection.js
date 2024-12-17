@@ -30,7 +30,10 @@ function TwoCharacterSelection() {
                     axios.get('http://localhost:5000/races/getRaces'),
                 ]);
                 
-                setCharacters(characterResponse.data);
+                // Filter out NPC characters (where isNpc is true)
+                const filteredCharacters = characterResponse.data.filter((character) => !character.isNpc);
+    
+                setCharacters(filteredCharacters);
                 setClasses(classResponse.data);
                 setRaces(raceResponse.data);
             } catch (error) {
@@ -38,7 +41,7 @@ function TwoCharacterSelection() {
                 setError('Error fetching data.');
             }
         };
-
+    
         fetchData();
     }, []);
 

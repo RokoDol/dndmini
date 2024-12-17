@@ -17,14 +17,16 @@ function SinglePlayerCharacter() {
     const fetchData = async () => {
       try {
         const characterResponse = await axios.get('http://localhost:5000/characters/getCharacters');
-        setCharacters(characterResponse.data);
-
+        // Filter out characters with isNpc set to true
+        const filteredCharacters = characterResponse.data.filter((character) => !character.isNpc);
+        setCharacters(filteredCharacters);
+  
         const classResponse = await axios.get('http://localhost:5000/classes/getClasses');
         setClasses(classResponse.data);
-
+  
         const raceResponse = await axios.get('http://localhost:5000/races/getRaces');
         setRaces(raceResponse.data);
-
+  
         const itemResponse = await axios.get('http://localhost:5000/items/getItems');
         setItems(itemResponse.data);
       } catch (error) {
@@ -32,7 +34,7 @@ function SinglePlayerCharacter() {
         setError('Error fetching data.');
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -94,9 +96,14 @@ function SinglePlayerCharacter() {
   const handleCharacterSelection = (id) => {
     setSelectedCharacterId(id);
   
-    // Save the selected character to localStorage
+    // Find the selected character from the characters array
     const selectedCharacter = characters.find((character) => character.id === id);
-    localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));
+    
+    if (selectedCharacter) {
+      // Save the selected character to localStorage
+      localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));
+      console.log('Selected character:', selectedCharacter); // Debugging line to log the selected character
+    }
   };
 const handleChapterSelection = () => {
   navigate ("/select-chapter")
